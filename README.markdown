@@ -4,7 +4,7 @@ Sound familiar? It should.
 
 ## The Idea
 
-It's like [Twitter](www.twitter.com), but simpler, and with fewer features. 
+It's like [Twitter](http://www.twitter.com), but simpler, and with fewer features. 
 
 ## The Implementation
 
