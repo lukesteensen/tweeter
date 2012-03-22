@@ -12,6 +12,7 @@ Edge Rails. Probably some Redis. Maybe a little Backbone later, if we're going c
 
 ## The People
 
+* Nikhil Goel
 * Luke Steensen
 * Devin Brooks
-* Nikhil Goel
+
