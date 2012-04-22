@@ -1,3 +1,5 @@
+ENV["REDISTOGO_URL"] = 'redis://localhost:6379'
+
 Tweeter::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
