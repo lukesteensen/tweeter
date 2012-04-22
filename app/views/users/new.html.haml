@@ -1,0 +1,9 @@
+%h1 Sign up
+
+= simple_form_for @user do |f|
+  = f.input :name
+  = f.input :password
+  = f.input :password_confirmation
+  = f.input :protected
+  = f.button :submit
+

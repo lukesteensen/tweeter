@@ -1,0 +1,12 @@
+.row-fluid
+  .span7
+    %h2 Tweets
+    - @posts.each do |p|
+      .well
+        %span= p.user.name + " says: " << p.body
+        %br/
+        %span= p.created_at
+  .span3
+    %h2 Topics
+    - @topics.each do |t|
+      %p= t.string + " - " << t.score.to_s

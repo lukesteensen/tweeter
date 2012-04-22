@@ -1,0 +1,6 @@
+%h1 New Post
+
+= simple_form_for @post do |f|
+  = f.input :body
+  = f.input :user_id, as: :hidden, input_html: {value: current_user.id}
+  = f.button :submit

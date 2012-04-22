@@ -1,0 +1,11 @@
+- @users.each do |u|
+  .well
+    %span= u.name
+    - if @followings[u.id]
+      = simple_form_for @followings[u.id] do |f|
+        = f.input :follower_id, as: :hidden
+        = f.input :followee_id, as: :hidden
+        = f.button :submit
+    - else
+      %span You already follow this user
+
