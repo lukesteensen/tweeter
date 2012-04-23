@@ -10,20 +10,26 @@
       .navbar.navbar-fixed-top
         .navbar-inner
           .container
-            %a.brand TweeterVU
+            %a.brand{href: root_url} TweeterVU
             %ul.nav
-              %li.active= link_to 'Home', root_url
-              %li= link_to 'New Tweet', new_post_url
-              %li= link_to 'Logout', logout_path
-              %li.pull-right
-                = current_user ? link_to('Signed in as: '<< current_user.name, root_url) : link_to("Log in", login_path)
+              %li{class: page(:home) ? 'active' : ''}= link_to 'Home', root_path
+              %li{class: page(:new_post) ? 'active' : ''}= link_to 'New Tweet', new_post_path
+            %ul.nav.pull-right
+              - if current_user
+                %li
+                  %p.navbar-text= 'Signed in as ' << current_user.name
+                %li.divider-vertical
+                %li= link_to 'Logout', logout_path
+              - else
+                %li= link_to "Signup", signup_path
+                %li.divider-vertical
+                %li= link_to "Log in", login_path
       .row-fluid
         .span2
           %ul.nav.nav-list
             %li.nav-header Header
-            %li.active
-              %a Home
-            %li= link_to 'Users', users_path
+            %li{class: page(:home) ? 'active' : ''}= link_to 'Home', root_path
+            %li{class: page(:users) ? 'active' : ''}= link_to 'Users', users_path
         .span10
           - flash.each do |key, value|
             .alert{:class => 'alert-'<< key.to_s}= value
