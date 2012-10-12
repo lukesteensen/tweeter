@@ -2,6 +2,8 @@ class Topic
 
   attr_accessor :string, :score
 
+  # DISCLAIMER: This would normally be cached / memoized, as it's called on
+  # every request to root_path
   def self.all
     topics = []
     @trends = $redis.smembers('trends')
