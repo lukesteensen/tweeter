@@ -8,11 +8,10 @@ It's like [Twitter](http://www.twitter.com), but simpler, and with fewer feature
 
 ## The Implementation
 
-Edge Rails. Probably some Redis. Maybe a little Backbone later, if we're going crazy. 
+Rails 3.2. Redis. The cloud. A few hours of coding in Featheringill. It's all very exciting. 
 
 ## The People
 
 * Nikhil Goel
 * Luke Steensen
 * Devin Brooks
-
